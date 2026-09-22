@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:customersdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+score-service:
+  base-url: ${SCORE_SERVICE_URL:http://localhost:9090}
+  connect-timeout: ${SCORE_CONNECT_TIMEOUT:2s}
+  read-timeout: ${SCORE_READ_TIMEOUT:3s}
