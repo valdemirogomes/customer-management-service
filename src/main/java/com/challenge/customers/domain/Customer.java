@@ -21,6 +21,14 @@ public class Customer {
     protected Customer() {
     }
 
+    public Customer(Long id, String name, String cpf, String email, CustomerStatus status) {
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.email = email;
+        this.status = status;
+    }
+
     public Customer(String name, String cpf, String email, CustomerStatus status) {
         this.name = name;
         this.cpf = cpf;
@@ -62,5 +70,8 @@ public class Customer {
 
     public void setStatus(CustomerStatus v) {
         status = v;
+    }
+
+    public void setId(long l) {
     }
 }
